@@ -1100,7 +1100,7 @@ function goHome(){P.scr='home';P.wipEdit=null;render();}
 function goWrite() {
   var ds=toStr(new Date()), ex=P.plans[ds];
   if(ex){P.wip=dc(ex);}
-  else{var prev=getPrevPlan(ds);if(prev){P.wip=dc(prev);P.wip.date=ds;P.wip.fb='';}else{P.wip=defPlan(ds);}}
+  else{var prev=getPrevPlan(ds);if(prev){P.wip=dc(prev);P.wip.date=ds;}else{P.wip=defPlan(ds);}}
   P.wipDate=ds; P.wipEdit=null; P.scr='write'; render();
 }
 function openDetail(ds){P.wip=dc(P.plans[ds]);P.wipDate=ds;P.wipEdit=null;P.scr='write';render();}
